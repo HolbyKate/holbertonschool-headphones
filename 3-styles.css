@@ -156,6 +156,7 @@ p {
 }
 
 .menu-icon {
+    position: absolute;
     display: none;
 }
 
@@ -286,6 +287,12 @@ p {
 
     .nav ul.active {
         display: flex;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .nav ul {
+        top: 40px;
     }
 }
 
@@ -465,13 +472,28 @@ p {
 }
 
 .pentagon img {
-    width: 190px;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .pentagon-item {
     position: relative;
-    margin: 0 30px;
+    width: 190px;
+    margin: 20px;
+}
+
+.grow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .grow h2 {
@@ -480,6 +502,7 @@ p {
     align-items: center;
     font-size: 46px;
     font-style: bold;
+    margin: 0;
     z-index: 1;
 }
 
@@ -489,7 +512,6 @@ p {
     align-items: center;
     font-size: 14px;
     font-style: normal;
-    width: 13rem;
 }
 
 
@@ -548,46 +570,59 @@ p {
     font-weight: 600;
     line-height: normal;
     max-width:40rem;
+    margin-bottom: 50px;
 }
 
 .contact_us li {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
     text-align: left;
-    border: 0;
+    margin-bottom: 1.5rem;
 }
 
 .contact_us label {
+    display: flex;
+    justify-content: flex-start;
     color: var(--color-text);
     font-family: var(--font-sourcesanspro);
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    margin-bottom: 0;
 }
 
 .contact_us form {
     align-items: center;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 40rem;
+    top: 10px;
+    margin-bottom: 1.5rem;
 
 }
 
 .contact_us input {
+    display: flex;
+    justify-content: flex-start;
     border: 0px;
     border-bottom: 1px solid #071629;
     opacity: 0.1745;
-    margin: 0 0 1rem 0;
+    margin: 0;
+    margin-bottom: 10px;rem;
 }
 
 .contact_us textarea {
+    display: flex;
+    justify-content: flex-start;
     border: 0px;
     border-bottom: 1px solid #071629;
     opacity: 0.1745;
+    margin: 0;
 }
 
-.contact_us li:last-child input {
-    margin-bottom: 0;
-}
+
 
 .contact_us button {
     width: 10rem;
