@@ -289,6 +289,12 @@ p {
     }
 }
 
+@media screen and (max-width: 375px) {
+    .nav ul {
+        top: 40px;
+    }
+}
+
 /* Section what we do */
 
 .what_we_do_container {
@@ -402,7 +408,7 @@ p {
     }
 }
 
-@media screen and(max-width: 481px) {
+@media screen and(max-width: 375px) {
     .icon_what_we_do h2 {
         font-size: 1rem;
     }
@@ -461,43 +467,52 @@ p {
 .pentagon {
     display: flex;
     flex-direction: row;
-    align-items: end;
     justify-content: center;
 }
 
 .pentagon img {
-    margin: 0 30px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.pentagon-item {
+    position: relative;
     width: 190px;
+    margin: 20px;
 }
 
-.pentagon img:first-child {
-    margin-left: 0;
-}
-
-.pentagon img:last-child {
-    margin-right: 0;
+.grow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .grow h2 {
     color: var(--color-text);
     text-align: center;
+    align-items: center;
     font-size: 46px;
     font-style: bold;
-    line-height: 1.625rem;
-    padding: 0 1.25rem;
-    position: cover;
+    margin: 0;
+    z-index: 1;
 }
 
 .grow p {
     color: var(--color-text);
     text-align: center;
+    align-items: center;
     font-size: 14px;
     font-style: normal;
-    line-height: 1.625rem;
-    width: 13rem;
-    margin-bottom: 6.7rem;
-    padding: 0 1.25rem;
 }
+
 
 @media screen and (max-width: 767px) {
     .pentagon {
@@ -523,5 +538,15 @@ p {
     .grow p {
         margin-bottom: 0;
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .grow h2 {
+        font-size: 1.5rem;
+    }
+
+    .grow p {
+        font-size: 0.875rem;
     }
 }
