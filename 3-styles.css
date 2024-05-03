@@ -575,21 +575,19 @@ p {
 
 .contact_us li {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style-type: none;
-    text-align: left;
     margin-bottom: 1.5rem;
+    padding-left: 0;
 }
 
 .contact_us label {
     display: flex;
-    justify-content: flex-start;
     color: var(--color-text);
     font-family: var(--font-sourcesanspro);
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    margin-bottom: 0;
 }
 
 .contact_us form {
@@ -610,7 +608,6 @@ p {
     border-bottom: 1px solid #071629;
     opacity: 0.1745;
     margin: 0;
-    margin-bottom: 10px;rem;
 }
 
 .contact_us textarea {
@@ -621,8 +618,6 @@ p {
     opacity: 0.1745;
     margin: 0;
 }
-
-
 
 .contact_us button {
     width: 10rem;
@@ -642,4 +637,37 @@ p {
 
 .contact_us button:hover {
     opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+    .contact_us form {
+        max-width: 20rem;
+    }
+
+    .contact_us button {
+        width: 8rem;
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contact_us h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact_us label {
+        font-size: 0.875rem;
+    }
+
+    .contact_us input {
+        font-size: 0.875rem;
+    }
+
+    .contact_us textarea {
+        font-size: 0.875rem;
+    }
+
+    .contact_us button {
+        font-size: 0.875rem;
+    }
 }
